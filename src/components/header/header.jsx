@@ -26,7 +26,7 @@ const Header = () => {
                 то выходить из неё не нужно и достаточно одной точки,
                 чтобы зайти в папку img */}
                 {/* <img src='./'></img> */}
-                <img src={flower}></img>
+                {/* <img src={flower}></img> */}
             </header>
         </div>
     )

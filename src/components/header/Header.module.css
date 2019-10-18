@@ -4,13 +4,16 @@
   margin: 0 auto;
   height: 70px;
   width: 1365px;
+  padding-top: 15px;
 }
 
 .header {
-  height: 70px;
-  width: 1365px;
+  height: 100px;
+  width: 1400px;
   position: fixed; /* зафиксировала шапку при скролинге, но она упала вниз */
   z-index: 101; /* позволяет скролить страницу под шапку, а не поверх шапки */
+  background-color: rgb(139,168,198);
+  opacity: 0.75;
 }
 
 .header img {

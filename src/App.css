@@ -1,22 +1,10 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
+  background: url(winter.jpg);
+  background-size: cover;
+  height: 850px;
+  /* чтобы при уменьшении размера страницы через ctrl вёрстка не съезжала, но к сожалению картинка не уменьшается */
+  /* на сайте, копию которого делаю, та же самая проблема */
+  /* background-position: center center;  */
+  background-attachment: fixed; /* изображение остаётся на месте даже при скролинге страницы */
 }
