@@ -1,0 +1,20 @@
+.container {
+  /* центрировала весь сайт с помощью margin: 0 auto */
+  /* не работает, если не задана ширина и высота */
+  margin: 0 auto;
+  height: 70px;
+  width: 1365px;
+}
+
+.header {
+  height: 70px;
+  width: 1365px;
+  position: fixed; /* зафиксировала шапку при скролинге, но она упала вниз */
+  z-index: 101; /* позволяет скролить страницу под шапку, а не поверх шапки */
+}
+
+.header img {
+  height: 70px;
+  width: 1365px;
+  object-fit: cover;
+}
