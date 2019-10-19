@@ -6,8 +6,13 @@ body {
   background-attachment: fixed; /* изображение остаётся на месте даже при скролинге страницы */
 }
 
-.grid__App {
+.container {
   width: 1200px;
+  margin: auto;
+}
+
+.grid__App {
+  width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
