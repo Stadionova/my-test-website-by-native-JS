@@ -8,6 +8,7 @@
 }
 
 .header {
+  grid-area: h;
   height: 100px;
   width: 1400px;
   position: fixed; /* зафиксировала шапку при скролинге */
@@ -15,9 +16,3 @@
   background-color: rgb(139,168,198);
   opacity: 0.75;
 }
-
-/* .header img {
-  height: 70px;
-  width: 1365px;
-  object-fit: cover;
-} */

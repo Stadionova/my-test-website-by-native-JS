@@ -6,8 +6,10 @@ function App() {
   return (
     // для всего сайта создала общий div,
     // в котором будут лежать все декомпозированные компоненты
-    <div className="App">
-      <Header />
+    <div className="grid__App">
+      <div className="grid__site">
+        <Header />
+      </div>
     </div>
   );
 }
