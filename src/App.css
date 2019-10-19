@@ -7,28 +7,10 @@ body {
 }
 
 .grid__App {
-  text-align: center;
-  margin: auto;
-}
-
-.grid-site {
+  width: 1200px;
+  margin: 0 auto;
   display: grid;
-  /* grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 100px);
-  grid-gap: 20px; */
-  /* пишу как и что будет в строках и колонках */
-  grid-template-areas: 'h'; /* nav займёт одну колонку, content займёт вторую колонку */
-  /* говорим сколько строк у нас будет:
-      типа одна строка для хэдера,
-      вторая строка для всего остального */
-  /* то есть первая строка высотой 60px, 
-      вторая строка равна одной фракции 1fr */
-  grid-template-rows: 60px 1fr;
-  /* колонок тоже будет две: одна для сайдбара слева, 
-      вторая для всего остального справа */
-  /* одна колонка будет занимать 2 фракции,
-      вторая = 10 фракциям (равных частей) */
-  grid-template-columns: 2fr 10fr;
-  /* grid-gap - это растояние между элементами */
-  /* grid-gap: 10px; */
+  grid-gap: 70px;
 }

@@ -1,6 +1,6 @@
 // пишется всегда
 import React from 'react';
-import flower from './img/flower_orig.jpg'
+import asia from './img/asia.jpg'
 
 // подключаем css стили
 // s - это название объекта стилей, который содержит в себе свойства/классы и их значения
@@ -8,10 +8,10 @@ import flower from './img/flower_orig.jpg'
 // это обеспечивается благодаря надстройке module.css вместо просто css
 // значением класса/свойства является уникальный айдишник, который присваивается каждому элементу,
 // которому был присвоен класс
-import s from './Header.module.css';
+import s from './Main.module.css';
 
 // Header - это компонента/функция, которая возвращает html разметку
-const Header = () => {
+const Main = () => {
     return (
         // s.header - это объект s с классом header, который я сама придумала
         // и задала стили этому классу в css документе
@@ -19,16 +19,15 @@ const Header = () => {
         // можно задать и обычный класс: className='headerDiv'
         // но module.css позволяет упростить процесс постоянного придумывания классов
         // и отслеживание отсутствия дублей
-        <header className={s.header}>
+        <div className={s.main}>
             {/* две точки значат, что я вышла из папки и зашла в папку img
             если у меня html находится в той же папке, что и папка img
             то выходить из неё не нужно и достаточно одной точки,
             чтобы зайти в папку img */}
-            {/* <img src='./'></img> */}
-            <img src={flower}></img>
-        </header>
+            <img src={asia}></img>
+        </div>
     )
 }
 
 // обязательно делаю экспорт функции, чтобы её можно было импортировать в любом файле проекта
-export default Header;
+export default Main;
