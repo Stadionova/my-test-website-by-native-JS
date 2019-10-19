@@ -1,7 +1,7 @@
 .main {
   grid-area: m;
   opacity: 0.75;
-  grid-column: 2 / 4;
+  grid-column: 2 / 6;
   grid-row: 2 / 4;
 }
 
