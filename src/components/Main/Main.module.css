@@ -1,12 +1,17 @@
 .main {
-  grid-area: m;
   opacity: 0.75;
   grid-column: 2 / 6;
-  grid-row: 2 / 4;
+  grid-row: 2 / 7;
 }
 
 .main img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media (max-width: 800px) {
+  .main {
+    grid-column: 1 / 5;
+  }
 }
