@@ -7,6 +7,7 @@
   height: 30px;
   display: flex;
   font-family: 'Montserrat', sans-serif;
+  padding-right: 230px;
 }
 
 .search div {
@@ -15,12 +16,14 @@
 
 .search input {
   font-size: 15px;
-  color: rgb(245, 223, 189);
-  background-color: #a9b2a2;
+  color: rgb(1,79,77);
+  background-color: rgb(1,79,77);
   font-family: 'Montserrat', sans-serif;
   size: 15pt;
   width: 200px;
   outline: none;
+  margin-right: 5px;
+  text-align: center;
 }
 
 .search button {
@@ -28,7 +31,7 @@
   height: 30px;
   border: none;
   font-size: 15px;
-  color: rgb(245, 223, 189);
+  color: rgb(255, 248, 239);
   background-color: #a9b2a2;
   size: 15pt;
   width: 200px;
@@ -37,13 +40,16 @@
 }
 
 .search button:hover {
-  color: rgb(236, 225, 208);
+  color: rgb(1,79,77);
+  transition: 1s;
 }
 
 .search input:focus {
-  border-color: rgb(245, 223, 189);
+  background-color: rgb(247, 243, 238);
+  transition: 1s;
 }
 
 .search input:hover {
-  border-color: rgb(245, 223, 189);
+  background-color: rgb(255, 248, 239);
+  transition: 1s;
 }

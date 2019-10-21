@@ -6,6 +6,9 @@ import Top from '../Top/Top';
 import Hot from '../Hot/Hot';
 import New from '../New/New';
 import Search from '../Search/Search';
+import Login from '../Login/Login';
+import Submit from '../Submit/Submit';
+import Follow from '../Follow/Follow';
 
 // подключаем css стили
 // s - это название объекта стилей, который содержит в себе свойства/классы и их значения
@@ -41,6 +44,9 @@ const Header = () => {
             <Hot />
             <New />
             <Search />
+            <Login />
+            <Submit />
+            <Follow />
             {/* <div className={s.item}><a href='/new'>NEW</a></div> */}
         </header>
     )

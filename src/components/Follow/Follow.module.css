@@ -1,8 +1,4 @@
-.hot {
-  margin-right: 15px;
-}
-
-.hot button {
+.follow button {
   display: inline-block;
   padding: 8px;
   padding-left: 10px;
@@ -15,7 +11,7 @@
   border: none;
 }
 
-.hot button:hover {
+.follow button:hover {
   background-color: #918270;
   transition: 1s;
   border: 1px solid #7c6f60 transparent;

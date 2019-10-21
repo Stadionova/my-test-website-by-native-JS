@@ -1,12 +1,12 @@
 import React from 'react';
-import s from './Hot.module.css';
+import s from './Login.module.css';
 
-const Hot = () => {
+const Login = () => {
     return (
-        <div className={s.hot}>
-            <button>HOT</button>
+        <div className={s.login}>
+            <button>Login</button>
         </div>
     )
 }
 
-export default Hot;
+export default Login;
