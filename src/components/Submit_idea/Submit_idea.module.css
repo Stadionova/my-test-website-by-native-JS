@@ -1,0 +1,22 @@
+.hot {
+  margin-right: 15px;
+}
+
+.hot button {
+  display: inline-block;
+  padding: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  background-color: #a9b2a2;
+  border-radius: 3px;
+  color: rgb(255, 248, 239);
+  font-size: 10pt;
+  border: none;
+}
+
+.hot button:hover {
+  background-color: #918270;
+  transition: 1s;
+  border: 1px solid #7c6f60 transparent;
+}
