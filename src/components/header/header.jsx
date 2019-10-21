@@ -1,7 +1,7 @@
 // пишется всегда
 import React from 'react';
 import flower from './img/flower_orig.jpg'
-import Hot from './components/Hot/Hot';
+import Hot from '../Hot/Hot';
 
 // подключаем css стили
 // s - это название объекта стилей, который содержит в себе свойства/классы и их значения
@@ -31,7 +31,7 @@ const Header = () => {
             {/* ссылки стали кликабельными в навигационной панели */}
             {/* <div className={s.item}><a href='/competition'>COMPETITION</a></div> */}
             {/* <div className={s.item}><a href='/top'>TOP</a></div> */}
-            <div className={s.item}><a href='/hot'>HOT</a></div>
+            <Hot />
             {/* <div className={s.item}><a href='/new'>NEW</a></div> */}
         </header>
     )
