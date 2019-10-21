@@ -1,10 +1,13 @@
+.top {
+  margin-right: 15px;
+}
+
 .top button {
   display: inline-block;
   padding: 8px;
   padding-left: 10px;
   padding-right: 10px;
   text-align: center;
-  margin-top: 12px;
   background-color: #a9b2a2;
   border-radius: 1px;
   color: rgb(255, 248, 239);
