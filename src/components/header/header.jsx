@@ -5,6 +5,7 @@ import Competition from '../Competition/Competition';
 import Top from '../Top/Top';
 import Hot from '../Hot/Hot';
 import New from '../New/New';
+import Search from '../Search/Search';
 
 // подключаем css стили
 // s - это название объекта стилей, который содержит в себе свойства/классы и их значения
@@ -39,6 +40,7 @@ const Header = () => {
             <Top />
             <Hot />
             <New />
+            <Search />
             {/* <div className={s.item}><a href='/new'>NEW</a></div> */}
         </header>
     )

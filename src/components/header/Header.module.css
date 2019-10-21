@@ -2,7 +2,6 @@
   width: 1200px;
   position: fixed; /* зафиксировала шапку при скролинге */
   z-index: 101; /* позволяет скролить страницу под шапку, а не поверх шапки */
-  opacity: 0.75;
   grid-column: 1 / 7;
   grid-row: 1 / 2;
   background-color: #57756a;

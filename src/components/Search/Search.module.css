@@ -1,0 +1,49 @@
+.search {
+  width: 200px;
+  height: 26px;
+  margin-left: 0px;
+  padding-left: 5px;
+  size: 15pt;
+  height: 30px;
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.search div {
+  display: flex;
+}
+
+.search input {
+  font-size: 15px;
+  color: rgb(245, 223, 189);
+  background-color: #a9b2a2;
+  font-family: 'Montserrat', sans-serif;
+  size: 15pt;
+  width: 200px;
+  outline: none;
+}
+
+.search button {
+  width: 80px;
+  height: 30px;
+  border: none;
+  font-size: 15px;
+  color: rgb(245, 223, 189);
+  background-color: #a9b2a2;
+  size: 15pt;
+  width: 200px;
+  height: 30px;
+  outline: none;
+}
+
+.search button:hover {
+  color: rgb(236, 225, 208);
+}
+
+.search input:focus {
+  border-color: rgb(245, 223, 189);
+}
+
+.search input:hover {
+  border-color: rgb(245, 223, 189);
+}
