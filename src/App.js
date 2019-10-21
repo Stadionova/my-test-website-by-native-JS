@@ -2,17 +2,22 @@ import React from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
+import Hot from './components/Hot/Hot';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 function App() {
   return (
-    // для всего сайта создала общий div,
-    // в котором будут лежать все декомпозированные компоненты
-    <div className='container'>
-      <div className="grid__App">
-        <Header />
-        <Main />
+    <BrowserRouter>
+      <div className='container'>
+        <div className="grid__App">
+          <Header />
+          <div className='app-wrapper-content'>
+            <Route path='/hot' component={Hot} />
+          </div>
+          <Main />
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 

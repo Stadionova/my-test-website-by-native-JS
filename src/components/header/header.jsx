@@ -1,6 +1,7 @@
 // пишется всегда
 import React from 'react';
 import flower from './img/flower_orig.jpg'
+import Hot from './components/Hot/Hot';
 
 // подключаем css стили
 // s - это название объекта стилей, который содержит в себе свойства/классы и их значения
@@ -28,10 +29,10 @@ const Header = () => {
             {/* <img src={flower}></img> */}
             {/* указала в ссылках путь к созданным страницам пока только к profile & dialogs, остальные ещё не создала */}
             {/* ссылки стали кликабельными в навигационной панели */}
-            <div className={s.item}><a href='/competition'>COMPETITION</a></div>
-            <div className={s.item}><a href='/top'>TOP</a></div>
+            {/* <div className={s.item}><a href='/competition'>COMPETITION</a></div> */}
+            {/* <div className={s.item}><a href='/top'>TOP</a></div> */}
             <div className={s.item}><a href='/hot'>HOT</a></div>
-            <div className={s.item}><a href='/new'>NEW</a></div>
+            {/* <div className={s.item}><a href='/new'>NEW</a></div> */}
         </header>
     )
 }
