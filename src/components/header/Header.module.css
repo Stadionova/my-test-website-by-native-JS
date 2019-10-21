@@ -16,12 +16,13 @@
   object-fit: cover;
 }
 
-.item {
+/* .item {
   color: rgb(226, 207, 182);
   margin-right: 15px;
   margin: 0 auto;
-}
+} */
 
-.item a {
-  text-decoration: none; /* отменила подчеркивание у ссылки */
-}
+/* .item a { */
+  /* отменила подчеркивание у ссылки */
+  /* text-decoration: none;
+} */

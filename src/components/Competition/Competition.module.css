@@ -1,24 +1,19 @@
-.header {
-  height: 70px;
-  width: 1200px;
-  position: fixed; /* зафиксировала шапку при скролинге */
-  z-index: 101; /* позволяет скролить страницу под шапку, а не поверх шапки */
-  opacity: 0.75;
-  grid-column: 1 / 7;
-  grid-row: 1 / 2;
-  background-color: #57756a;
+.top button {
+  display: inline-block;
+  padding: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  margin-top: 12px;
+  background-color: #a9b2a2;
+  border-radius: 1px;
+  color: rgb(255, 248, 239);
+  font-size: 10pt;
+  border: none;
 }
 
-.header img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.item {
-  width: 100px;
-  height: 50px;
-  background-color: #91a8a0;
-  color: rgb(226, 207, 182);
-  padding: 5px;
+.top button:hover {
+  background-color: #918270;
+  transition: 1s;
+  border: 1px solid #7c6f60 transparent;
 }

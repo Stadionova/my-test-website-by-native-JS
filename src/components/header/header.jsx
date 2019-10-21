@@ -1,7 +1,10 @@
 // пишется всегда
 import React from 'react';
 import flower from './img/flower_orig.jpg'
+import Competition from '../Competition/Competition';
+import Top from '../Top/Top';
 import Hot from '../Hot/Hot';
+import New from '../New/New';
 
 // подключаем css стили
 // s - это название объекта стилей, который содержит в себе свойства/классы и их значения
@@ -21,6 +24,7 @@ const Header = () => {
         // но module.css позволяет упростить процесс постоянного придумывания классов
         // и отслеживание отсутствия дублей
         <header className={s.header}>
+            <div><span>#Choose Selector</span></div>
             {/* две точки значат, что я вышла из папки и зашла в папку img
             если у меня html находится в той же папке, что и папка img
             то выходить из неё не нужно и достаточно одной точки,
@@ -31,7 +35,10 @@ const Header = () => {
             {/* ссылки стали кликабельными в навигационной панели */}
             {/* <div className={s.item}><a href='/competition'>COMPETITION</a></div> */}
             {/* <div className={s.item}><a href='/top'>TOP</a></div> */}
+            <Competition />
+            <Top />
             <Hot />
+            <New />
             {/* <div className={s.item}><a href='/new'>NEW</a></div> */}
         </header>
     )
