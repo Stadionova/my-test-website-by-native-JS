@@ -88,7 +88,7 @@ class Ideas extends Component {
                     </div>
                 </div>
                 <div className='countComments'>
-                    <span>Всего комментариев: {this.state.count}</span>
+                    <span>Total comments: {this.state.count}</span>
                 </div>
             </div>
         );

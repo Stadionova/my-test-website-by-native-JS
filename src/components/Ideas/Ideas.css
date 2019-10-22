@@ -1,8 +1,8 @@
 .createCommentsBlock {
   width: 200px;
-  height: 300px;
-  background-color: rgb(170, 122, 216);
-  border: 1px solid rgb(68, 27, 107);
+  height: 280px;
+  background-color: #57756a;
+  border: 1px solid #365248;
   margin-top: 150px;
   text-align: center;
   position: relative;
@@ -16,7 +16,7 @@
 }
 
 .ideaState {
-  margin-top: 20px;
+  margin-top: 15px;
   color: beige;
   text-align: center;
 }
@@ -28,8 +28,8 @@ span {
 .comments {
   width: 173px;
   height: 150px;
-  background-color: azure;
-  border: 1px solid rgb(209, 209, 209);
+  background-color: #a9b2a2;
+  border: 1px solid #7a8373;
   position: absolute;
   text-align: center;
   justify-content: space-between;
@@ -40,6 +40,46 @@ span {
 .countComments {
   color: black;
   position: absolute;
-  margin-top: 180px;
+  margin-top: 170px;
   left: 10px;
+  text-align: center;
+}
+
+.comments input {
+  color: rgb(1, 79, 77);
+  background-color: rgb(1, 79, 77);
+  font-family: 'Montserrat', sans-serif;
+  size: 15pt;
+  outline: none;
+  margin-right: 5px;
+  text-align: center;
+}
+
+.clickButton button {
+  width: 80px;
+  height: 30px;
+  border: none;
+  font-size: 15px;
+  color: rgb(255, 248, 239);
+  background-color: #a9b2a2;
+  size: 15pt;
+  width: 180px;
+  height: 30px;
+  outline: none;
+}
+
+.clickButton button:hover {
+  background-color: #918270;
+  transition: 1s;
+  border: 1px solid #7c6f60 transparent;
+}
+
+.comments input:focus {
+  background-color: rgb(247, 243, 238);
+  transition: 1s;
+}
+
+.comments input:hover {
+  background-color: rgb(255, 248, 239);
+  transition: 1s;
 }
