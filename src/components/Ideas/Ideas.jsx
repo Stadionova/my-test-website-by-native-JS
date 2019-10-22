@@ -23,13 +23,25 @@ class Ideas extends Component {
         // использую этот стэйт ниже в методе render
         // state пишем в фигурных скобках, если используем в jsx
 
+        // привязала контекст стэйта
+        // так как контекст теряется в методе createNewTask
+        // то есть без привязки контекста объекта state метод createNewTask не увидит содержимое объекта state
+        // так как в методе данных свойств comment & data нет
+        this.createNewTask = this.createNewTask.bind(this);
     }
 
     // метод createNewTask, который создаёт новые таски
     // навешала клик на кнопку
     createNewTask() {
         alert('hi');
-    }
+        // контекст забиндила выше, поэтому у данного метода доступ к объекту есть
+        alert(this.state.comment + ' hello ' + this.state.data);
+        // меняю свойство в state
+        // вот так менять сам объект state нельзя
+        // this.state.idea = this.state.comment + ' ' + this.state.data;
+        // нужно это делать через специальный метод setState
+        this.setState({ idea: this.state.comment + ' ' + this.state.data });
+    };
 
     // метод render
     render() {
