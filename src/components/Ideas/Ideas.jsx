@@ -28,6 +28,7 @@ class Ideas extends Component {
         // то есть без привязки контекста объекта state метод createNewTask не увидит содержимое объекта state
         // так как в методе данных свойств comment & data нет
         this.createNewTask = this.createNewTask.bind(this);
+        this.changeInputText = this.changeInputText.bind(this);
     }
 
     // метод createNewTask, который создаёт новые таски
@@ -35,12 +36,19 @@ class Ideas extends Component {
     createNewTask() {
         alert('hi');
         // контекст забиндила выше, поэтому у данного метода доступ к объекту есть
-        alert(this.state.comment + ' hello ' + this.state.data);
+        // alert(this.state.comment + ' hello ' + this.state.data);
         // меняю свойство в state
         // вот так менять сам объект state нельзя
         // this.state.idea = this.state.comment + ' ' + this.state.data;
         // нужно это делать через специальный метод setState
-        this.setState({ idea: this.state.comment + ' ' + this.state.data });
+        // this.setState({ idea: this.state.comment });
+    };
+
+    // все методы обязательно нужно забиндить в конструкторе
+    // принимает значение пользователя: event и присваивает его в свойство в state
+    changeInputText(event) {
+        this.setState({ comment: event.currentTarget.value });
+        this.setState({ idea: this.state.comment });
     };
 
     // метод render
@@ -53,10 +61,17 @@ class Ideas extends Component {
                 </div>
                 <div className='ideaState'>
                     {/* достаю значение из state  */}
-                    Idea: <span>{this.state.idea}</span>
+                    Idea: <span>{this.state.comment}</span>
                     <div className='comments'>
-                        <input value={this.state.comment}></input>
-                        <span>{this.state.data}</span>
+                        {/* если указать просто value={this.state.comment}, 
+                        то инпут становится readonly, то есть неизменяемым
+                        чтобы можно было в инпуте писать другие значения
+                        нужно создать методы и указать в джаваскриптовом событии onchange */}
+                        {/* то есть если происходит изменение и срабатывает onChange
+                        то запускается метод: changeInputText, в который передаём значение: event, 
+                        которое пользователь ввёл в input */}
+                        <input value={this.state.comment} onChange={this.changeInputText}></input>
+                        {/* <span>{this.state.data}</span> */}
                     </div>
                 </div>
             </div>
