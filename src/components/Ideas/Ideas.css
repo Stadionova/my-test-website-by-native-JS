@@ -36,3 +36,10 @@ span {
   left: 10px;
   top: 80px;
 }
+
+.countComments {
+  color: black;
+  position: absolute;
+  margin-top: 180px;
+  left: 10px;
+}

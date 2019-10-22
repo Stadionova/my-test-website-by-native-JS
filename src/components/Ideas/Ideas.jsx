@@ -15,8 +15,9 @@ class Ideas extends Component {
         // то есть, наша компонента обладает каким-то внешним видом, поведением и состоянием: state (то есть обладает значением каких-то полей)
         this.state = {
             idea: 'first idea',
-            comment: 'hi',
-            data: '22.10.2019'
+            comment: ' ',
+            data: '22.10.2019',
+            count: 0
         };
         // например компонента обладает идеей со значением: first idea
         // делается это для того, чтобы использовать этот стэйт где-либо по коду и не инлайнить значения вручную
@@ -27,14 +28,21 @@ class Ideas extends Component {
         // так как контекст теряется в методе createNewTask
         // то есть без привязки контекста объекта state метод createNewTask не увидит содержимое объекта state
         // так как в методе данных свойств comment & data нет
-        this.createNewTask = this.createNewTask.bind(this);
+        // чтобы эти бинды не писать здесь, их можно пистаь напрямую в jsx
+        // оставлю один бинд здесь, второй перенесу инлайн в jsx
+        // this.createNewTask = this.createNewTask.bind(this);
         this.changeInputText = this.changeInputText.bind(this);
     }
 
     // метод createNewTask, который создаёт новые таски
     // навешала клик на кнопку
     createNewTask() {
-        alert('hi');
+        // alert('hi');
+        this.setState({ idea: this.state.comment });
+        this.setState({ comment: ' ' });
+        if (this.state.count >= 0 && this.state.comment != ' ') {
+            this.state.count += 1;
+        }
         // контекст забиндила выше, поэтому у данного метода доступ к объекту есть
         // alert(this.state.comment + ' hello ' + this.state.data);
         // меняю свойство в state
@@ -51,13 +59,18 @@ class Ideas extends Component {
         this.setState({ idea: this.state.comment });
     };
 
+    countIdeas(event) {
+        this.setState({ comment: event.currentTarget.value });
+        this.setState({ idea: this.state.comment });
+    };
+
     // метод render
     render() {
         return (
             // добавила обработчик события на клик по кнопке
             <div className='createCommentsBlock'>
                 <div className='clickButton'>
-                    <button onClick={this.createNewTask}>Submit new Idea</button>
+                    <button onClick={this.createNewTask.bind(this)}>Submit new Idea</button>
                 </div>
                 <div className='ideaState'>
                     {/* достаю значение из state  */}
@@ -73,6 +86,9 @@ class Ideas extends Component {
                         <input value={this.state.comment} onChange={this.changeInputText}></input>
                         {/* <span>{this.state.data}</span> */}
                     </div>
+                </div>
+                <div className='countComments'>
+                    <span>Всего комментариев: {this.state.count}</span>
                 </div>
             </div>
         );
