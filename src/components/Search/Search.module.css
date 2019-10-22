@@ -40,8 +40,9 @@
 }
 
 .search button:hover {
-  color: rgb(1,79,77);
+  background-color: #918270;
   transition: 1s;
+  border: 1px solid #7c6f60 transparent;
 }
 
 .search input:focus {
