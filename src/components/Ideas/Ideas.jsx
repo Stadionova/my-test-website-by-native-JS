@@ -13,7 +13,12 @@ class Ideas extends Component {
 
         // дальше объявлеям свойство state
         // то есть, наша компонента обладает каким-то внешним видом, поведением и состоянием: state (то есть обладает значением каких-то полей)
-        this.state = { idea: 'first idea' }; // например компонента обладает идеей со значением: first idea
+        this.state = {
+            idea: 'first idea',
+            comment: 'hi',
+            data: '22.10.2019'
+        };
+        // например компонента обладает идеей со значением: first idea
         // делается это для того, чтобы использовать этот стэйт где-либо по коду и не инлайнить значения вручную
         // использую этот стэйт ниже в методе render
         // state пишем в фигурных скобках, если используем в jsx
@@ -30,13 +35,17 @@ class Ideas extends Component {
     render() {
         return (
             // добавила обработчик события на клик по кнопке
-            <div>
+            <div className='createCommentsBlock'>
                 <div className='clickButton'>
                     <button onClick={this.createNewTask}>Submit new Idea</button>
                 </div>
                 <div className='ideaState'>
                     {/* достаю значение из state  */}
                     Idea: <span>{this.state.idea}</span>
+                    <div className='comments'>
+                        <input value={this.state.comment}></input>
+                        <span>{this.state.data}</span>
+                    </div>
                 </div>
             </div>
         );
