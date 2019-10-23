@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Ideas.css';
+import Submit from '../Submit/Submit';
 
 // класс Ideas наследует от Component
 class Ideas extends Component {
@@ -18,7 +19,8 @@ class Ideas extends Component {
             // ideaNum: 'first idea',
             comment: ' ',
             count: 0,
-            ideas: []
+            ideas: [],
+            div: 0
         };
         // например компонента обладает идеей: ideaNum со значением: first idea
         // делается это для того, чтобы использовать этот стэйт где-либо по коду и не инлайнить значения вручную
@@ -104,6 +106,9 @@ class Ideas extends Component {
                         {/* достаю значение из state: this.state.ideas */}
                         {this.state.ideas.map((item) => {
                             return <div class='idea'>{item}</div>
+                        })}
+                        {this.state.ideas.map((item) => {
+                            return <Submit />
                         })}
                         {/* если указать просто value={this.state.comment}, 
                         то инпут становится readonly, то есть неизменяемым.
