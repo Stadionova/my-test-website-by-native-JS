@@ -109,16 +109,7 @@ class Ideas extends Component {
                         {/* достаю значение из state: this.state.ideas */}
                         {this.state.ideas.map((item) => {
                             return (
-                                <div className='createIdeasBlock'>
-                                    <div className='clickButton'>
-                                        <button onClick={this.createNewIdeaByButton.bind(this)}>Submit new Idea</button>
-                                    </div>
-                                    <div className='ideaState'>
-                                        Write your IDEA
-                                </div>
-                                    <input value={this.state.comment} onChange={this.changeInputText} onKeyPress={this.createNewIdeaByEnter.bind(this)}></input>
-                                    <div class='idea'>{item}</div>
-                                </div>
+                                <div class='idea'>{item}</div>
                             )
                         })}
                         {/* если указать просто value={this.state.comment}, 
@@ -134,8 +125,22 @@ class Ideas extends Component {
                     </div>
                 </div>
                 <div className='countIdeas'>
-                    <span>Total comments: {this.state.count}</span>
+                    <span>Total IDEAS: {this.state.count}</span>
                 </div>
+                {this.state.ideas.map((item) => {
+                    return (
+                        <div className='createIdeasBlock'>
+                            <div className='clickButton'>
+                                <button onClick={this.createNewIdeaByButton.bind(this)}>Submit new Idea</button>
+                            </div>
+                            <div className='ideaState'>
+                                Write your IDEA
+                                </div>
+                            <input value={this.state.comment} onChange={this.changeInputText} onKeyPress={this.createNewIdeaByEnter.bind(this)}></input>
+                            <div class='idea'>{item}</div>
+                        </div>
+                    )
+                })}
             </div >
         );
     }
