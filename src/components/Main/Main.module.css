@@ -2,17 +2,19 @@
   opacity: 0.75;
   grid-column: 2 / 6;
   grid-row: 2 / 7;
-  background-image: url(./img/asia.jpg);
+  /* background-image: url(./img/asia.jpg); */
+  background-color: #57756a;
 }
 
 @media (max-width: 800px) {
   .main {
-    grid-column: 1 / 5;
+    grid-column: 1 / 4;
+    margin-left: 3px;
   }
 }
 
-.text__inside {
-  position: absolute;
+.title {
+  text-align: center;
 }
 
 .title h3 {
@@ -28,4 +30,6 @@
   vertical-align: middle;
   font-size: 14pt;
   line-height: 2em;
+  margin: 0 auto;
+  color: rgb(245, 223, 189);
 }
