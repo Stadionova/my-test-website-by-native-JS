@@ -15,7 +15,7 @@ class Ideas extends Component {
         // то есть, наша компонента обладает каким-то внешним видом, поведением 
         // и состоянием: state (то есть обладает значением каких-то полей)
         this.state = {
-            ideaNum: 'first idea',
+            // ideaNum: 'first idea',
             comment: ' ',
             count: 0,
             ideas: []
@@ -37,7 +37,7 @@ class Ideas extends Component {
     }
 
     // общий метод createNewIdea создаёт новые идеи 
-    // при клике на кнопку Submit new Idea и при нажатии клавиши Enter в input 
+    // при клике на кнопку: Submit new Idea и при нажатии клавиши: Enter в input 
     createNewIdea() {
         // пушим в проперти ideas новую идею, которая лежит в comment
         // а в comment я положила то, что лежит в input с помощью метода: changeInputText
@@ -57,60 +57,64 @@ class Ideas extends Component {
         // this.setState({ idea: this.state.comment });
     };
 
+    // данный метод вызывает общий метод createNewIdea при клике на кнопку: Submit new Idea
+    // для каждого события пришлось создать свой собственный метод,
+    // потому что у input есть event Enter,
+    // а у клика по кнопке такого event нет
     createNewIdeaByButton(event) {
         this.createNewIdea();
     };
 
+    // данный метод вызывает общий метод createNewIdea при нажатии клавиши Enter, находясь в input
     createNewIdeaByEnter(event) {
         // если событием является нажатие на Enter, то
-        // вызываем общий метод createNewIdea и для button, и для input
+        // вызываем общий и для button, и для input метод createNewIdea 
         if (event.key === 'Enter') {
             this.createNewIdea();
         }
     };
 
-    // все методы обязательно нужно забиндить в конструкторе
-    // принимает значение пользователя: event и присваивает его в свойство в state
+    // все методы обязательно нужно забиндить в конструкторе или инлайн в jsx
+    // данный метод принимает значение пользователя: event и присваивает его в state свойство: comment
     changeInputText(event) {
         this.setState({ comment: event.currentTarget.value });
-        this.setState({ ideaNum: this.state.comment });
+        /* закомментила, потому что изначально хотела дублировать написанную идею справа от заголовка: Write your IDEA */
+        // this.setState({ ideaNum: this.state.comment });
     };
 
-    countIdeas(event) {
-        this.setState({ comment: event.currentTarget.value });
-        this.setState({ ideaNum: this.state.comment });
-    };
-
-    // метод render
+    // метод render возвращает html страничку
     render() {
         return (
-            // добавила обработчик события на клик по кнопке
             <div className='createIdeasBlock'>
+                {/* добавила обработчик события на клик по кнопке */}
                 <div className='clickButton'>
                     <button onClick={this.createNewIdeaByButton.bind(this)}>Submit new Idea</button>
                 </div>
                 <div className='ideaState'>
-                    {/* достаю значение из state  */}
-                    Idea: <span>{this.state.comment}</span>
+                    Write your IDEA
+                    {/* закомментила span, потому что изначально хотела дублировать написанную идею справа от заголовка: Write your IDEA */}
+                    {/* <span>{this.state.comment}</span> */}
                     <div className='ideas'>
-                        {/* создала отдельный div для каждой отдельной идеи */}
-                        {/* где функция map пробегается по массиву и возвращает div */}
-                        {/* каждый элемент мэпа будет item */}
-                        {/* для каждого item вызову стрелочную функцию ниже и верну div */}
+                        {/* функция map пробегается по массиву, который лежит в стэйт свойстве: ideas,
+                         и возвращает div для каждой отдельной идеи */}
+                        {/* каждый элемент мэпа будет называться item */}
+                        {/* для каждого item вызываю стрелочную функцию, которая возвращает div */}
                         {/* map меняет один элемент на другой */}
+                        {/* то есть меняю item на div */}
+                        {/* достаю значение из state: this.state.ideas */}
                         {this.state.ideas.map((item) => {
                             return <div class='idea'>{item}</div>
                         })}
                         {/* если указать просто value={this.state.comment}, 
-                        то инпут становится readonly, то есть неизменяемым
-                        чтобы можно было в инпуте писать другие значения
-                        нужно создать методы и указать в джаваскриптовом событии onchange */}
-                        {/* то есть если происходит изменение и срабатывает onChange: onChange={this.changeInputText}
+                        то инпут становится readonly, то есть неизменяемым.
+                        Чтобы можно было в инпуте писать другие значения
+                        создала метод: changeInputText */}
+                        {/* то есть если происходит изменение в input 
+                        и срабатывает onChange: onChange={this.changeInputText}
                         то запускается метод: changeInputText, в который передаём значение: event, 
                         которое пользователь ввёл в input */}
-                        {/* навешиваю обработчик на событие Enter */}
+                        {/* в этот же input навешиваю обработчик на событие Enter */}
                         <input value={this.state.comment} onChange={this.changeInputText} onKeyPress={this.createNewIdeaByEnter.bind(this)}></input>
-                        {/* <span>{this.state.data}</span> */}
                     </div>
                 </div>
                 <div className='countIdeas'>
