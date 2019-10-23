@@ -64,7 +64,9 @@ class Ideas extends Component {
     // потому что у input есть event Enter,
     // а у клика по кнопке такого event нет
     createNewIdeaByButton(event) {
-        this.createNewIdea();
+        if (this.state.comment != ' ') {
+            this.createNewIdea();
+        }
     };
 
     // данный метод вызывает общий метод createNewIdea при нажатии клавиши Enter, находясь в input
@@ -128,13 +130,13 @@ class Ideas extends Component {
                 {this.state.ideas.map((item) => {
                     return (
                         <div className='createIdeas'>
-                            <div className='clickButton'>
+                            {/* <div className='clickButton'>
                                 <button onClick={this.createNewIdeaByButton.bind(this)}>Submit new Idea</button>
-                            </div>
+                            </div> */}
                             <div className='ideaState'>
-                                Write your IDEA
+                                It's your IDEA
                                 </div>
-                            <input placeholder="Write your IDEA" value={this.state.comment} onChange={this.changeInputText} onKeyPress={this.createNewIdeaByEnter.bind(this)}></input>
+                            {/* <input value={this.state.comment} onChange={this.changeInputText} onKeyPress={this.createNewIdeaByEnter.bind(this)}></input> */}
                             <div class='idea'>{item}</div>
                         </div>
                     )

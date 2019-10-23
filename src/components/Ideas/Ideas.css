@@ -1,5 +1,5 @@
 .createIdeasBlock {
-  height: 280px;
+  height: 260px;
   background-color: #57756a;
   border: 1px solid #365248;
   text-align: center;
@@ -7,15 +7,6 @@
   grid-row: 7 / 20;
   position: relative;
   margin-top: 20px;
-}
-
-.createIdeas {
-  height: 280px;
-  background-color: #57756a;
-  border: 1px solid #365248;
-  text-align: center;
-  position: relative;
-  margin-top: 60px;
 }
 
 .clickButton {
@@ -26,7 +17,6 @@
 }
 
 .ideaState {
-  margin-top: 15px;
   color: beige;
   text-align: center;
 }
@@ -37,11 +27,10 @@ span {
 
 .ideas {
   height: 150px;
-  background-color: #a9b2a2;
-  border: 1px solid #7a8373;
   text-align: center;
   padding: px;
-  margin: 5px;
+  margin: 10px;
+  margin-left: 12px;
 }
 
 .countIdeas {
@@ -94,4 +83,54 @@ span {
     margin-left: 3px;
     margin-top: 15px;
   }
+}
+
+.createIdeas {
+  height: 250px;
+  background-color: #57756a;
+  border: 1px solid #365248;
+  text-align: center;
+  grid-column: 3 / 5;
+  grid-row: 7 / 20;
+  position: relative;
+  margin-top: 20px;
+}
+
+.createIdeas {
+  height: 280px;
+  background-color: #57756a;
+  border: 1px solid #365248;
+  text-align: center;
+  position: relative;
+  margin-top: 60px;
+}
+
+.ideaState {
+  margin-top: 15px;
+  color: beige;
+  text-align: center;
+}
+
+.ideasBlock {
+  text-align: center;
+  padding: px;
+  margin: 5px;
+}
+
+.countIdeas {
+  color: black;
+  position: absolute;
+  left: 10px;
+  text-align: center;
+}
+
+.ideas input {
+  width: 370px;
+  height: 150px;
+  color: rgb(1, 79, 77);
+  background-color: rgb(1, 79, 77);
+  font-family: 'Montserrat', sans-serif;
+  size: 15pt;
+  outline: none;
+  text-align: center;
 }
