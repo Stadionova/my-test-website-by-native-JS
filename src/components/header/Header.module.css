@@ -1,5 +1,4 @@
 .header {
-  width: 1200px;
   position: fixed; /* зафиксировала шапку при скролинге */
   z-index: 101; /* позволяет скролить страницу под шапку, а не поверх шапки */
   grid-column: 1 / 7;
@@ -7,7 +6,6 @@
   background-color: #57756a;
   display: flex; /* расположила блоки в строку */
   padding: 20px 0px 20px 50px;
-  /* justify-content: space-between; */
 }
 
 .header img {

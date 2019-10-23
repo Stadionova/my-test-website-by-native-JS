@@ -13,7 +13,6 @@ function App() {
         <Header />
         <Main />
         <Ideas />
-        {/* <Hot /> */}
       </div>
     </div>
     // </BrowserRouter>

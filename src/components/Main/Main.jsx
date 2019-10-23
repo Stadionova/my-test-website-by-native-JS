@@ -24,7 +24,18 @@ const Main = () => {
             если у меня html находится в той же папке, что и папка img
             то выходить из неё не нужно и достаточно одной точки,
             чтобы зайти в папку img */}
-            <img src={asia}></img>
+                <div className={s.main__inside}>
+                    <div className={s.text__inside}>
+                        <div className={s.title}>
+                            <h3>#IDEA MACHINE</h3>
+                        </div>
+                        <div className={s.text}>
+                            <p>A live crowd-sourced collection of ideas for new apps & business ideas that have been requested by the internet. 
+                            Sorted by Hot, Top and New. With upvotes and downvotes. To post your own idea use the hashtag 
+                            #ideaMachine or click the "submit a new idea" button below.</p>
+                        </div>
+                    </div>
+                </div>
         </div>
     )
 }
