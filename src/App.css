@@ -18,5 +18,4 @@ body {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(20, 100px);
-  grid-row-gap: 10px;
 }
