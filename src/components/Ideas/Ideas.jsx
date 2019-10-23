@@ -88,6 +88,9 @@ class Ideas extends Component {
     render() {
         return (
             <div className='createIdeasBlock'>
+                {/* {this.state.ideas.map((item) => {
+                return <Submit />
+            })} */}
                 {/* добавила обработчик события на клик по кнопке */}
                 <div className='clickButton'>
                     <button onClick={this.createNewIdeaByButton.bind(this)}>Submit new Idea</button>
@@ -105,10 +108,18 @@ class Ideas extends Component {
                         {/* то есть меняю item на div */}
                         {/* достаю значение из state: this.state.ideas */}
                         {this.state.ideas.map((item) => {
-                            return <div class='idea'>{item}</div>
-                        })}
-                        {this.state.ideas.map((item) => {
-                            return <Submit />
+                            return (
+                                <div className='createIdeasBlock'>
+                                    <div className='clickButton'>
+                                        <button onClick={this.createNewIdeaByButton.bind(this)}>Submit new Idea</button>
+                                    </div>
+                                    <div className='ideaState'>
+                                        Write your IDEA
+                                </div>
+                                    <input value={this.state.comment} onChange={this.changeInputText} onKeyPress={this.createNewIdeaByEnter.bind(this)}></input>
+                                    <div class='idea'>{item}</div>
+                                </div>
+                            )
                         })}
                         {/* если указать просто value={this.state.comment}, 
                         то инпут становится readonly, то есть неизменяемым.
