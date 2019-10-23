@@ -1,4 +1,4 @@
-.createCommentsBlock {
+.createIdeasBlock {
   width: 200px;
   height: 280px;
   background-color: #57756a;
@@ -25,7 +25,7 @@ span {
   color: aliceblue;
 }
 
-.comments {
+.ideas {
   width: 173px;
   height: 150px;
   background-color: #a9b2a2;
@@ -37,7 +37,7 @@ span {
   top: 80px;
 }
 
-.countComments {
+.countIdeas {
   color: black;
   position: absolute;
   margin-top: 170px;
@@ -45,7 +45,7 @@ span {
   text-align: center;
 }
 
-.comments input {
+.ideas input {
   color: rgb(1, 79, 77);
   background-color: rgb(1, 79, 77);
   font-family: 'Montserrat', sans-serif;
@@ -74,12 +74,12 @@ span {
   border: 1px solid #7c6f60 transparent;
 }
 
-.comments input:focus {
+.ideas input:focus {
   background-color: rgb(247, 243, 238);
   transition: 1s;
 }
 
-.comments input:hover {
+.ideas input:hover {
   background-color: rgb(255, 248, 239);
   transition: 1s;
 }
