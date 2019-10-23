@@ -107,11 +107,9 @@ class Ideas extends Component {
                         {/* map меняет один элемент на другой */}
                         {/* то есть меняю item на div */}
                         {/* достаю значение из state: this.state.ideas */}
-                        {this.state.ideas.map((item) => {
-                            return (
-                                <div class='idea'>{item}</div>
-                            )
-                        })}
+                        {/* {this.state.ideas.map((item) => {
+                            return (<div class='idea'>{item}</div>)
+                        })} */}
                         {/* если указать просто value={this.state.comment}, 
                         то инпут становится readonly, то есть неизменяемым.
                         Чтобы можно было в инпуте писать другие значения
@@ -124,19 +122,19 @@ class Ideas extends Component {
                         <input value={this.state.comment} onChange={this.changeInputText} onKeyPress={this.createNewIdeaByEnter.bind(this)}></input>
                     </div>
                 </div>
-                <div className='countIdeas'>
+                {/* <div className='countIdeas'>
                     <span>Total IDEAS: {this.state.count}</span>
-                </div>
+                </div> */}
                 {this.state.ideas.map((item) => {
                     return (
-                        <div className='createIdeasBlock'>
+                        <div className='createIdeas'>
                             <div className='clickButton'>
                                 <button onClick={this.createNewIdeaByButton.bind(this)}>Submit new Idea</button>
                             </div>
                             <div className='ideaState'>
                                 Write your IDEA
                                 </div>
-                            <input value={this.state.comment} onChange={this.changeInputText} onKeyPress={this.createNewIdeaByEnter.bind(this)}></input>
+                            <input placeholder="Write your IDEA" value={this.state.comment} onChange={this.changeInputText} onKeyPress={this.createNewIdeaByEnter.bind(this)}></input>
                             <div class='idea'>{item}</div>
                         </div>
                     )
