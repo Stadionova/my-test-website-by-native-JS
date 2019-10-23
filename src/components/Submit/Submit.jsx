@@ -1,6 +1,5 @@
 import React from 'react';
 import s from './Submit.module.css';
-import Ideas from '../Ideas/Ideas';
 
 const Submit = () => {
     return (

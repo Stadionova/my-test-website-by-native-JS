@@ -35,6 +35,17 @@ const Main = () => {
                             #ideaMachine or click the "submit a new idea" button below.</p>
                         </div>
                     </div>
+                    <div className={s.main__buttons}>
+                        <div>
+                            <button>VIEW IDEAS</button>
+                        </div>
+                        <div>
+                            <button>SUBMIT A NEW IDEA</button>
+                        </div>
+                    </div>
+                    <div className={s.scrollSpan}>
+                        <span>Scroll down to view ideas</span>
+                    </div>
                 </div>
         </div>
     )
