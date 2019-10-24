@@ -28,7 +28,7 @@ const Header = () => {
         // но module.css позволяет упростить процесс постоянного придумывания классов
         // и отслеживание отсутствия дублей
         <header className={s.header}>
-            <div><span>#Choose Selector</span></div>
+            <div className={s.chooseLogo}><span>#Choose Selector</span></div>
             {/* две точки значат, что я вышла из папки и зашла в папку img
             если у меня html находится в той же папке, что и папка img
             то выходить из неё не нужно и достаточно одной точки,

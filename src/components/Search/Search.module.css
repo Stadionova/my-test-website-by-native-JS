@@ -7,7 +7,7 @@
   height: 30px;
   display: flex;
   font-family: 'Montserrat', sans-serif;
-  padding-right: 230px;
+  padding-right: 100px;
 }
 
 .search div {
@@ -27,14 +27,12 @@
 }
 
 .search button {
-  width: 80px;
   height: 30px;
   border: none;
   font-size: 15px;
-  color: rgb(255, 248, 239);
+  color: rgb(245, 223, 189);
   background-color: #a9b2a2;
   size: 15pt;
-  width: 200px;
   height: 30px;
   outline: none;
 }
