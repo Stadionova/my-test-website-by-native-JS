@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Ideas.css';
-import Submit from '../Submit/Submit';
 
 // класс Ideas наследует от Component
 class Ideas extends Component {
@@ -16,7 +15,6 @@ class Ideas extends Component {
         // то есть, наша компонента обладает каким-то внешним видом, поведением 
         // и состоянием: state (то есть обладает значением каких-то полей)
         this.state = {
-            // ideaNum: 'first idea',
             comment: ' ',
             count: 0,
             ideas: [],
@@ -86,7 +84,7 @@ class Ideas extends Component {
         // this.setState({ ideaNum: this.state.comment });
     };
 
-    // метод render возвращает html страничку
+    // метод render возвращает html страничку (то есть отрендерить - значит "отрисовать")
     render() {
         return (
             <div className='createIdeasBlock'>
@@ -127,13 +125,15 @@ class Ideas extends Component {
                 {/* <div className='countIdeas'>
                     <span>Total IDEAS: {this.state.count}</span>
                 </div> */}
+
+                {/* здесь происходит отрисовка новых идей при клике на кнопку */}
                 {this.state.ideas.map((item) => {
                     return (
                         <div className='createIdeas'>
                             {/* <div className='clickButton'>
                                 <button onClick={this.createNewIdeaByButton.bind(this)}>Submit new Idea</button>
                             </div> */}
-                            <div className='ideaState'>
+                            <div className='ideaColor'>
                                 It's your IDEA
                                 </div>
                             {/* <input value={this.state.comment} onChange={this.changeInputText} onKeyPress={this.createNewIdeaByEnter.bind(this)}></input> */}

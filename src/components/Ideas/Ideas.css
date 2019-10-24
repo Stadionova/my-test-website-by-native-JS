@@ -50,7 +50,7 @@ span {
 .clickButton button {
   border: none;
   font-size: 15px;
-  color: rgb(255, 248, 239);
+  /* color: rgb(56, 54, 51); */
   background-color: #a9b2a2;
   size: 15pt;
   width: 200px;
@@ -94,7 +94,13 @@ span {
 
 .ideaState {
   margin-top: 15px;
-  color: beige;
+  /* color: rgb(56, 54, 51); */
+  text-align: center;
+}
+
+.ideaColor {
+  margin-top: 15px;
+  color: rgb(56, 54, 51);
   text-align: center;
 }
 
@@ -112,7 +118,7 @@ span {
 }
 
 .ideas input {
-  width: 500px;
+  width: 570px;
   height: 100px;
   color: rgb(1, 79, 77);
   background-color: rgb(245, 223, 189);
@@ -121,6 +127,7 @@ span {
   outline: none;
   text-align: center;
   margin-right: 5px;
+  border: 1px solid black;
 }
 
 .idea {
@@ -132,9 +139,8 @@ span {
 }
 
 .idea div {
-  width: 100px;
-  margin: 0 auto;
   top: 90px;
   position: absolute;
-  left: 140px;
+  left: 300px;
+  text-align: center;
 }
