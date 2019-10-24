@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 .header {
   position: fixed; /* зафиксировала шапку при скролинге */
   z-index: 101; /* позволяет скролить страницу под шапку, а не поверх шапки */
@@ -6,6 +8,7 @@
   background-color: #57756a;
   display: flex; /* расположила блоки в строку */
   padding: 20px 50px 20px 50px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .header img {
@@ -29,6 +32,7 @@
     margin-left: 3px;
     margin-top: 3px;
   }
+
   .header span {
     display: none;
   }

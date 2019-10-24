@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 .main {
   opacity: 0.75;
   grid-column: 2 / 6;
@@ -63,4 +65,10 @@
 .scrollSpan {
   text-align: center;
   margin-top: 30px;
+}
+
+.main__buttons button:hover {
+  background-color: #918270;
+  transition: 0.5s;
+  border: 1px solid #7c6f60 transparent;
 }
