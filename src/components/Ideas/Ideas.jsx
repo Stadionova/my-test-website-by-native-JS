@@ -14,8 +14,11 @@ class Ideas extends Component {
         // дальше объявлеям свойство state
         // то есть, наша компонента обладает каким-то внешним видом, поведением 
         // и состоянием: state (то есть обладает значением каких-то полей)
+
+        // в данной компоненте есть свой пропс, который нужен только здесь
+        // записываю сюда каждую новую идею и сразу после добавления в общий стэйт идей удаляю текущую идею
         this.state = {
-            comment: ' ',
+            idea: ' ',
         };
         // например компонента обладает идеей: ideaNum со значением: first idea
         // делается это для того, чтобы использовать этот стэйт где-либо по коду и не инлайнить значения вручную
@@ -30,19 +33,21 @@ class Ideas extends Component {
         // чтобы эти бинды не писать здесь, их можно писать напрямую в jsx
         // оставлю некоторые бинды здесь, остальные перенесу инлайн в jsx
         this.changeInputText = this.changeInputText.bind(this);
-        this.createNewIdea = this.createNewIdea.bind(this);
+        this.pushNewIdea = this.pushNewIdea.bind(this);
     }
 
     // общий метод createNewIdea создаёт новые идеи 
     // при клике на кнопку: Submit new Idea и при нажатии клавиши: Enter в input 
-    createNewIdea() {
+    pushNewIdea() {
         // пушим в проперти ideas новую идею, которая лежит в comment
         // а в comment я положила то, что лежит в input с помощью метода: changeInputText
         // const newIdea = this.state.ideas;
         // newIdea.push(this.state.comment);
-        const newComment = this.state.comment;
-        this.props.onAddIdeaToState(newComment);
-        this.setState({ comment: ' ' });
+        const newIdea = this.state.idea;
+        // вызываю их пропсов общую функцию и передаю в неё новую идею, которую записываю в общий стэйт в App.js
+        this.props.onAddIdeaToState(newIdea);
+        // обнуляю инпут с написанной идеей
+        this.setState({ idea: ' ' });
         // а потом в ideas кладём этот новый массив с новой идеей
         // this.setState({ ideas: newIdea })
         // затем обнуляю содержимое input
@@ -57,34 +62,36 @@ class Ideas extends Component {
         // this.setState({ idea: this.state.comment });
     };
 
-    // данный метод вызывает общий метод createNewIdea при клике на кнопку: Submit new Idea
+    // данный метод вызывает метод pushNewIdea при клике на кнопку: Submit new Idea
     // для каждого события пришлось создать свой собственный метод,
     // потому что у input есть event Enter,
     // а у клика по кнопке такого event нет
-    createNewIdeaByButton(event) {
-        if (this.state.comment != ' ') {
-            this.createNewIdea();
+    // если инпут пустой, кнопка не работает
+    pushNewIdeaByButton(event) {
+        if (this.state.idea != ' ') {
+            this.pushNewIdea();
         }
     };
 
-    // данный метод вызывает общий метод createNewIdea при нажатии клавиши Enter, находясь в input
-    createNewIdeaByEnter(event) {
+    // данный метод вызывает метод pushNewIdea при нажатии клавиши Enter, находясь в input
+    pushNewIdeaByEnter(event) {
         // если событием является нажатие на Enter, то
-        // вызываем общий и для button, и для input метод createNewIdea 
+        // вызываем общий и для button, и для input метод pushNewIdea 
         if (event.key === 'Enter') {
-            this.createNewIdea();
+            this.pushNewIdea();
         }
     };
 
     // все методы обязательно нужно забиндить в конструкторе или инлайн в jsx
-    // данный метод принимает значение пользователя: event и присваивает его в state свойство: comment
+    // данный метод принимает значение пользователя: event и присваивает его в свойство локального state: idea
+    // данный метод срабатывает в момент, когда в инпут было что-то введено
     changeInputText(event) {
-        this.setState({ comment: event.currentTarget.value });
+        this.setState({ idea: event.currentTarget.value });
         /* закомментила, потому что изначально хотела дублировать написанную идею справа от заголовка: Write your IDEA */
         // this.setState({ ideaNum: this.state.comment });
     };
 
-    // метод render возвращает html страничку (то есть отрендерить - значит "отрисовать")
+    // метод render возвращает html страничку (отрендерить - значит "отрисовать")
     render() {
         return (
             <div className='createIdeasBlock'>
@@ -93,7 +100,7 @@ class Ideas extends Component {
             })} */}
                 {/* добавила обработчик события на клик по кнопке */}
                 <div className='clickButton'>
-                    <button onClick={this.createNewIdeaByButton.bind(this)}>Submit new Idea</button>
+                    <button onClick={this.pushNewIdeaByButton.bind(this)}>Submit new Idea</button>
                 </div>
                 <div className='ideaState'>
                     Write your IDEA
@@ -119,7 +126,8 @@ class Ideas extends Component {
                         то запускается метод: changeInputText, в который передаём значение: event, 
                         которое пользователь ввёл в input */}
                         {/* в этот же input навешиваю обработчик на событие Enter */}
-                        <input value={this.state.comment} onChange={this.changeInputText} onKeyPress={this.createNewIdeaByEnter.bind(this)}></input>
+                        {/* в value кладу идею */}
+                        <input value={this.state.idea} onChange={this.changeInputText} onKeyPress={this.pushNewIdeaByEnter.bind(this)}></input>
                     </div>
                 </div>
                 {/* <div className='countIdeas'>
@@ -127,6 +135,7 @@ class Ideas extends Component {
                 </div> */}
 
                 {/* здесь происходит отрисовка новых идей при клике на кнопку */}
+                {/* пробегаюсь по массиву идей, который беру из переданных пропсов */}
                 {this.props.ideas.map((item) => {
                     return (
                         <div className='createIdeas'>

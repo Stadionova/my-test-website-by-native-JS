@@ -13,16 +13,20 @@ class App extends Component {
     super();
 
     this.state = {
-      ideas: ['hello']
+      ideas: []
     };
 
     this.addIdeaToState = this.addIdeaToState.bind(this);
 
   }
 
+  // общий метод добавления идеи
   addIdeaToState(idea) {
+    // создаю переменную, в которую кладу массив с идеями из стэйта
     const newIdea = this.state.ideas;
+    // пушу в этот массив новую переданную идею
     newIdea.push(idea);
+    // кладу новый массив с новой идеей обратно в стэйт вместо предыдущего массива
     this.setState({ ideas: newIdea })
   }
 
@@ -32,7 +36,8 @@ class App extends Component {
         <div className="grid__App">
           <Header />
           <Main />
-          {/* в пропс Ideas передаю ideas, в котором лежит массив с идеями */}
+          {/* в пропс компоненты Ideas передаю пропс ideas, в котором лежит массив с идеями, название пропсам даю любое */}
+          {/* так же передаю в пропс общий метод */}
           <Ideas ideas={this.state.ideas} onAddIdeaToState={this.addIdeaToState} />
         </div>
       </div>
