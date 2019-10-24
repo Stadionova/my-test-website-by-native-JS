@@ -35,7 +35,7 @@ class App extends Component {
       <div className='container'>
         <div className="grid__App">
           <Header />
-          <Main />
+          <Main ideas={this.state.ideas} onAddIdeaToState={this.addIdeaToState} />
           {/* в пропс компоненты Ideas передаю пропс ideas, в котором лежит массив с идеями, название пропсам даю любое */}
           {/* так же передаю в пропс общий метод */}
           <Ideas ideas={this.state.ideas} onAddIdeaToState={this.addIdeaToState} />

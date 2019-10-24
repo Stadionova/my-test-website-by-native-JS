@@ -17,25 +17,24 @@ class Main extends Component {
         
     constructor() {
 
-        super(); 
+        super();
 
         this.state = {
-            comment: ' ',
-            count: 0,
-            ideas: [],
-            div: 0
+            idea: ' ',
         };
 
-        this.createNewIdea = this.createNewIdea.bind(this);
+        this.pushNewIdea = this.pushNewIdea.bind(this);
     }
 
-    createNewIdea() {
-        const newIdea = this.state.ideas;
-        newIdea.push(this.state.comment);
-        this.setState({ ideas: newIdea })
-        this.setState({ comment: ' ' });
-        if (this.state.count >= 0 && this.state.comment != ' ') {
-            this.state.count += 1;
+    pushNewIdea() {
+        const newIdea = this.state.idea;
+        this.props.onAddIdeaToState(newIdea);
+        this.setState({ idea: null });
+    };
+
+    pushNewIdeaByButton(event) {
+        if (this.state.idea) {
+            this.pushNewIdea();
         }
     };
 
@@ -68,7 +67,7 @@ class Main extends Component {
                                 <button>VIEW IDEAS</button>
                             </div>
                             <div>
-                                <button onClick={this.createNewIdea}>SUBMIT A NEW IDEA</button>
+                                <button onClick={this.pushNewIdeaByButton.bind(this)}>SUBMIT A NEW IDEA</button>
                             </div>
                         </div>
                         <div className={s.scrollSpan}>
@@ -76,7 +75,7 @@ class Main extends Component {
                         </div>
                     </div>
 
-                    {this.state.ideas.map((item) => {
+                {/* {this.props.ideas.map((item) => {
                     return (
                         <div className='createIdeas'>
                             <div className='ideaColor'>
@@ -84,8 +83,8 @@ class Main extends Component {
                             </div>
                             <div class='idea'><div>{item}</div></div>
                         </div>
-                        )
-                    })}
+                    )
+                })} */}
             </div>
         );
     }
