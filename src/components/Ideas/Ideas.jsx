@@ -16,9 +16,6 @@ class Ideas extends Component {
         // и состоянием: state (то есть обладает значением каких-то полей)
         this.state = {
             comment: ' ',
-            count: 0,
-            ideas: [],
-            div: 0
         };
         // например компонента обладает идеей: ideaNum со значением: first idea
         // делается это для того, чтобы использовать этот стэйт где-либо по коду и не инлайнить значения вручную
@@ -41,16 +38,19 @@ class Ideas extends Component {
     createNewIdea() {
         // пушим в проперти ideas новую идею, которая лежит в comment
         // а в comment я положила то, что лежит в input с помощью метода: changeInputText
-        const newIdea = this.state.ideas;
-        newIdea.push(this.state.comment);
-        // а потом в ideas кладём этот новый массив с новой идеей
-        this.setState({ ideas: newIdea })
-        // затем обнуляю содержимое input
+        // const newIdea = this.state.ideas;
+        // newIdea.push(this.state.comment);
+        const newComment = this.state.comment;
+        this.props.onAddIdeaToState(newComment);
         this.setState({ comment: ' ' });
+        // а потом в ideas кладём этот новый массив с новой идеей
+        // this.setState({ ideas: newIdea })
+        // затем обнуляю содержимое input
+        // this.setState({ comment: ' ' });
         // и увеличиваю счётчик идей после того, как содержимое input было удалено
-        if (this.state.count >= 0 && this.state.comment != ' ') {
-            this.state.count += 1;
-        }
+        // if (this.state.count >= 0 && this.state.comment != ' ') {
+        //     this.state.count += 1;
+        // }
         // вот так менять объект state нельзя
         // this.state.idea = this.state.comment + this.state.data;
         // нужно это делать через специальный метод setState
@@ -127,7 +127,7 @@ class Ideas extends Component {
                 </div> */}
 
                 {/* здесь происходит отрисовка новых идей при клике на кнопку */}
-                {this.state.ideas.map((item) => {
+                {this.props.ideas.map((item) => {
                     return (
                         <div className='createIdeas'>
                             {/* <div className='clickButton'>
