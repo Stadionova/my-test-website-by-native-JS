@@ -36,7 +36,7 @@ const Main = () => {
                         </div>
                     </div>
                     <div className={s.main__buttons}>
-                        <div>
+                        <div className={s.buttonView}>
                             <button>VIEW IDEAS</button>
                         </div>
                         <div>

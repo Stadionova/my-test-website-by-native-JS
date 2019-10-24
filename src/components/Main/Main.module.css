@@ -2,10 +2,9 @@
 
 .main {
   opacity: 0.75;
-  grid-column: 2 / 6;
-  grid-row: 2 / 7;
-  /* background-image: url(./img/asia.jpg); */
-  background-color: #57756a;
+  grid-column: 2 / 8;
+  grid-row: 2 / 8;
+  background-color: #57756a; /* background-image: url(./img/asia.jpg); */
 }
 
 @media (max-width: 800px) {
@@ -38,8 +37,13 @@
 
 .main__buttons {
   display: flex;
-  width: 320px;
+  width: 400px;
   margin: auto;
+}
+
+.buttonView {
+  margin-left: 45px;
+  margin-right: 20px;
 }
 
 .main__buttons button {
@@ -50,7 +54,6 @@
   padding-right: 10px;
   text-align: center;
   margin-top: 30px;
-  margin-right: 20px;
   background-color: #a9b2a2;
   border-radius: 3px;
   color: rgb(245, 223, 189);

@@ -2,8 +2,10 @@
 
 .header {
   position: fixed; /* зафиксировала шапку при скролинге */
+  left: 75px;
+  right: 75px;
   z-index: 101; /* позволяет скролить страницу под шапку, а не поверх шапки */
-  grid-column: 1 / 7;
+  grid-column: 1 / 9;
   grid-row: 1 / 2;
   background-color: #57756a;
   display: flex; /* расположила блоки в строку */
