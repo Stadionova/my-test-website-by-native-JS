@@ -1,4 +1,4 @@
-.login button {
+.login a {
   display: inline-block;
   padding: 5px;
   padding-left: 10px;
@@ -10,9 +10,10 @@
   border: none;
   color: #c7b39b;
   font-size: 13pt;
+  text-decoration: none;
 }
 
-.login button:hover {
+.login a:hover {
   color: #e0dbd5;
   transition: 1s;
 }

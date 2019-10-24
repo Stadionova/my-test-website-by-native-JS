@@ -4,7 +4,7 @@ import s from './Hot.module.css';
 const Hot = () => {
     return (
         <div className={s.hot}>
-            <button>HOT</button>
+            <a href="#">HOT</a>
         </div>
     )
 }

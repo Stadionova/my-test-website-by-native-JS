@@ -4,7 +4,7 @@ import s from './New.module.css';
 const New = () => {
     return (
         <div className={s.new}>
-            <button>NEW</button>
+            <a href="#">NEW</a>
         </div>
     )
 }

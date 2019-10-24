@@ -4,7 +4,7 @@ import s from './Follow.module.css';
 const Follow = () => {
     return (
         <div className={s.follow}>
-            <button>Follow</button>
+            <a href="#">Follow</a>
         </div>
     )
 }

@@ -4,7 +4,7 @@ import s from './Competition.module.css';
 const Competition = () => {
     return (
         <div className={s.competition}>
-            <button>COMPETITION</button>
+            <a href="#">COMPETITION</a>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
-.submit button {
+.submit a {
   display: inline-block;
   padding: 5px;
   padding-left: 10px;
@@ -13,9 +13,10 @@
   border: none;
   color: #c7b39b;
   font-size: 13pt;
+  text-decoration: none;
 }
 
-.submit button:hover {
+.submit a:hover {
   color: #e0dbd5;
   transition: 1s;
 }
