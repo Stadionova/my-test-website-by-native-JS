@@ -1,6 +1,5 @@
 // пишется всегда
 import React from 'react';
-// import flower from './img/flower_orig.jpg'
 import Competition from '../Competition/Competition';
 import Top from '../Top/Top';
 import Hot from '../Hot/Hot';

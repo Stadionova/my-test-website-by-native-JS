@@ -4,6 +4,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import Ideas from './components/Ideas/Ideas';
+import Competition from './components/Competition/Competition';
 // импортирую объект articles
 import { articles } from './components/fixture';
 // import { BrowserRouter, Route } from 'react-router-dom';
@@ -37,15 +38,17 @@ class App extends Component {
     // и кладу первый элемент массива в переменную article
     const article = articles[0];
     const twoObj = articles[1];
+    console.log(twoObj);
     return (
       <div className='container'>
         <div className="grid__App">
           {/* передаю в пропсы компоненты Header атрибут article, в который кладу переменную article */}
           <Header article={article} />
-          <Main ideas={this.state.ideas} onAddIdeaToState={this.addIdeaToState} objProps={twoObj} />
+          <Main ideas={this.state.ideas} onAddIdeaToState={this.addIdeaToState} />
           {/* в пропс компоненты Ideas передаю пропс ideas, в котором лежит массив с идеями, название пропсам даю любое */}
           {/* так же передаю в пропс общий метод */}
           <Ideas ideas={this.state.ideas} onAddIdeaToState={this.addIdeaToState} />
+          <Competition objProps={twoObj} />
         </div>
       </div>
     );
