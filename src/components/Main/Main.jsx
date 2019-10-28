@@ -1,7 +1,7 @@
 // пишется всегда
 import React, { Component } from 'react';
 // import React from 'react';
-import asia from './img/asia.jpg'
+// import asia from './img/asia.jpg'
 
 // подключаем css стили
 // s - это название объекта стилей, который содержит в себе свойства/классы и их значения

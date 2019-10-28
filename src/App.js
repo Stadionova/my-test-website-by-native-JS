@@ -36,12 +36,13 @@ class App extends Component {
     // у меня в articles лежит массив объектов, достаю его первый элемент по индексу 0
     // и кладу первый элемент массива в переменную article
     const article = articles[0];
+    const twoObj = articles[1];
     return (
       <div className='container'>
         <div className="grid__App">
           {/* передаю в пропсы компоненты Header атрибут article, в который кладу переменную article */}
           <Header article={article} />
-          <Main ideas={this.state.ideas} onAddIdeaToState={this.addIdeaToState} />
+          <Main ideas={this.state.ideas} onAddIdeaToState={this.addIdeaToState} objProps={twoObj} />
           {/* в пропс компоненты Ideas передаю пропс ideas, в котором лежит массив с идеями, название пропсам даю любое */}
           {/* так же передаю в пропс общий метод */}
           <Ideas ideas={this.state.ideas} onAddIdeaToState={this.addIdeaToState} />

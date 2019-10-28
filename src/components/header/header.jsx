@@ -20,6 +20,8 @@ import s from './Header.module.css';
 // import { articles } from '../fixture';
 
 // Header - это компонента/функция, которая возвращает html разметку
+// либо такая запись:
+// const Header = ({ article }) => {
 const Header = (props) => {
     const { article } = props;
     // console.log("-----article: " + JSON.stringify(article));
