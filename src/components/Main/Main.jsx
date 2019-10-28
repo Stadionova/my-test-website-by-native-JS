@@ -14,7 +14,7 @@ import s from './Main.module.css';
 // Header - это компонента/функция, которая возвращает html разметку
 // const Main = () => {
 class Main extends Component {
-        
+
     constructor() {
 
         super();
@@ -51,29 +51,29 @@ class Main extends Component {
                 если у меня html находится в той же папке, что и папка img
                 то выходить из неё не нужно и достаточно одной точки,
                 чтобы зайти в папку img */}
-                    <div className={s.main__inside}>
-                        <div className={s.text__inside}>
-                            <div className={s.title}>
-                                <h3>#IDEA MACHINE</h3>
-                            </div>
-                            <div className={s.text}>
-                                <p>A live crowd-sourced collection of ideas for new apps & business ideas that have been requested by the internet. 
-                                Sorted by Hot, Top and New. With upvotes and downvotes. To post your own idea use the hashtag 
+                <div className={s.main__inside}>
+                    <div className={s.text__inside}>
+                        <div className={s.title}>
+                            <h3>#IDEA MACHINE</h3>
+                        </div>
+                        <div className={s.text}>
+                            <p>A live crowd-sourced collection of ideas for new apps & business ideas that have been requested by the internet.
+                            Sorted by Hot, Top and New. With upvotes and downvotes. To post your own idea use the hashtag
                                 #ideaMachine or click the "submit a new idea" button below.</p>
-                            </div>
-                        </div>
-                        <div className={s.main__buttons}>
-                            <div className={s.buttonView}>
-                                <button>VIEW IDEAS</button>
-                            </div>
-                            <div>
-                                <button onClick={this.pushNewIdeaByButton.bind(this)}>SUBMIT A NEW IDEA</button>
-                            </div>
-                        </div>
-                        <div className={s.scrollSpan}>
-                            <span>Scroll down to view ideas</span>
                         </div>
                     </div>
+                    <div className={s.main__buttons}>
+                        <div className={s.buttonView}>
+                            <button>VIEW IDEAS</button>
+                        </div>
+                        <div>
+                            <button onClick={this.pushNewIdeaByButton.bind(this)}>SUBMIT A NEW IDEA</button>
+                        </div>
+                    </div>
+                    <div className={s.scrollSpan}>
+                        <span>Scroll down to view ideas</span>
+                    </div>
+                </div>
 
                 {/* {this.props.ideas.map((item) => {
                     return (

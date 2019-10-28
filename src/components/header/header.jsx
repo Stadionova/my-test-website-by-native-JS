@@ -1,6 +1,6 @@
 // пишется всегда
 import React from 'react';
-import flower from './img/flower_orig.jpg'
+// import flower from './img/flower_orig.jpg'
 import Competition from '../Competition/Competition';
 import Top from '../Top/Top';
 import Hot from '../Hot/Hot';
@@ -17,9 +17,13 @@ import Follow from '../Follow/Follow';
 // значением класса/свойства является уникальный айдишник, который присваивается каждому элементу,
 // которому был присвоен класс
 import s from './Header.module.css';
+// import { articles } from '../fixture';
 
 // Header - это компонента/функция, которая возвращает html разметку
-const Header = () => {
+const Header = (props) => {
+    const { article } = props;
+    // console.log("-----article: " + JSON.stringify(article));
+    // const article = articles[0];
     return (
         // s.header - это объект s с классом header, который я сама придумала
         // и задала стили этому классу в css документе
@@ -27,7 +31,12 @@ const Header = () => {
         // можно задать и обычный класс: className='headerDiv'
         // но module.css позволяет упростить процесс постоянного придумывания классов
         // и отслеживание отсутствия дублей
+
         <header className={s.header}>
+            <div>
+                {article.title}
+                {article.name}
+            </div>
             <div className={s.chooseLogo}><span>#Choose Selector</span></div>
             {/* две точки значат, что я вышла из папки и зашла в папку img
             если у меня html находится в той же папке, что и папка img

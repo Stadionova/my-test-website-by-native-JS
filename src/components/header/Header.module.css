@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+.test {
+  color: white;
+  size: 15pt;
+}
+
 .header {
   position: fixed; /* зафиксировала шапку при скролинге */
   left: 75px;
