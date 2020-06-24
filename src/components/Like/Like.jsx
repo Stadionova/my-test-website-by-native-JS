@@ -16,12 +16,12 @@ class Like extends Component {
         this.likeIdea = this.likeIdea.bind(this);
     }
 
-    likeIdea() {
-        let likeCount = document.querySelector('.likeIconCount');
+    likeIdea(event) {
+        let currentLikeCount = event.currentTarget.parentNode.querySelector('.likeIconCount');
         this.state.count += 1;
-        likeCount.textContent = this.state.count;
-        likeCount.style.paddingLeft = '5px';
-        likeCount.style.fontSize = '10pt';
+        currentLikeCount.textContent = this.state.count;
+        currentLikeCount.style.paddingLeft = '5px';
+        currentLikeCount.style.fontSize = '10pt';
         return this.state.count;
     };
 
