@@ -67,7 +67,21 @@
 
 .scrollSpan {
   text-align: center;
+  margin: 0 auto;
   margin-top: 30px;
+}
+
+.scrollSpan button {
+  background-color:#57756a;
+  color: rgb(245, 223, 189);
+  font-size: 13pt;
+  border: 0;
+  cursor: pointer;
+}
+
+.scrollSpan button:focus { 
+  outline: none !important;
+  border: 0 !important;
 }
 
 .main__buttons button:hover {

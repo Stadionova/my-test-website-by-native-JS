@@ -38,6 +38,10 @@ class Main extends Component {
         }
     };
 
+    crollPageToTheBottom() {
+        window.scrollTo(0, window.outerHeight);
+    };
+
     render() {
         return (
             // s.header - это объект s с классом header, который я сама придумала
@@ -71,7 +75,7 @@ class Main extends Component {
                         </div>
                     </div>
                     <div className={s.scrollSpan}>
-                        <span>Scroll down to view ideas</span>
+                        <button onClick={this.crollPageToTheBottom.bind(this)}>Scroll down to view all ideas</button>
                     </div>
                 </div>
 
