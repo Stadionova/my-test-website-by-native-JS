@@ -104,13 +104,8 @@ class Ideas extends Component {
                 return <Submit />
             })} */}
                 {/* добавила обработчик события на клик по кнопке */}
-                <div className='ideaButtons'>
-                    <div className='clickButton'>
-                        <button onClick={this.pushNewIdeaByButton.bind(this)}>Submit new Idea</button>
-                    </div>
-                    <div className='closeButton'>
-                        <button onClick={this.hideIdeaBlock.bind(this)}>&#215;</button>
-                    </div>
+                <div className='clickButton'>
+                    <button onClick={this.pushNewIdeaByButton.bind(this)}>Submit new Idea</button>
                 </div>
                 <div className='ideaState'>
                     Write your IDEA
@@ -152,9 +147,12 @@ class Ideas extends Component {
                             {/* <div className='clickButton'>
                                 <button onClick={this.createNewIdeaByButton.bind(this)}>Submit new Idea</button>
                             </div> */}
-                            <div className='ideaColor'>
-                                It's your IDEA
+                            <div className='ideaButtons'>
+                                <div className='ideaColor'>It's your IDEA</div>
+                                <div className='closeButton'>
+                                    <button onClick={this.hideIdeaBlock.bind(this)}>&#215;</button>
                                 </div>
+                            </div>
                             {/* <input value={this.state.comment} onChange={this.changeInputText} onKeyPress={this.createNewIdeaByEnter.bind(this)}></input> */}
                             <div class='idea'><div>{item}</div></div>
                         </div>

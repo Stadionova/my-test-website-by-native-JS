@@ -97,9 +97,10 @@ span {
 }
 
 .ideaColor {
-  margin-top: 15px;
   color: rgb(56, 54, 51);
   text-align: center;
+  margin: 0 auto;
+  margin-top: 17px;
 }
 
 .ideasBlock {
@@ -148,13 +149,14 @@ span {
 }
 
 .closeButton button {
-  background-color: #57756a;
+  background-color:rgb(245, 223, 189);
   border: 0;
   font-size: 30pt;
   cursor: pointer;
   position: absolute;
-  right: 5px;
-  color: rgb(245, 223, 189);
+  right: 10px;
+  color: #57756a;
+  height: 0;
 }
 
 .closeButton button:focus { 
