@@ -162,3 +162,16 @@ span {
   outline: none !important;
   border: 0 !important;
 }
+
+.ideaName {
+  font-size: 15px;
+  background-color: rgb(245, 223, 189);
+  font-family: 'Montserrat', sans-serif;
+  size: 15pt;
+  width: 200px;
+  outline: none;
+  margin-right: 5px;
+  text-align: center;
+  border: 0;
+  font-weight: 700;
+}

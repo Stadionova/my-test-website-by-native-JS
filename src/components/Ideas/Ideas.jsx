@@ -145,21 +145,16 @@ class Ideas extends Component {
                 {this.props.ideas.map((item) => {
                     return (
                         <div className='createIdeas'>
-                            {/* <div className='clickButton'>
-                                <button onClick={this.createNewIdeaByButton.bind(this)}>Submit new Idea</button>
-                            </div> */}
                             <div className='ideaButtons'>
-                                <div className='ideaColor'>It's your IDEA</div>
+                                <div className='ideaColor'>
+                                    <input className='ideaName' placeholder="Name of your IDEA"></input>
+                                </div>
                                 <div className='closeButton'>
                                     <button onClick={this.hideIdeaBlock.bind(this)}>&#215;</button>
                                 </div>
                             </div>
-                            {/* <input value={this.state.comment} onChange={this.changeInputText} onKeyPress={this.createNewIdeaByEnter.bind(this)}></input> */}
                             <div class='idea'><div>{item}</div></div>
                             <Like /> 
-                            {/* <div className='likeIcon'>
-                                <span>&#10084;</span>
-                            </div> */}
                         </div>
                     )
                 })}
