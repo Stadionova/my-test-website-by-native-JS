@@ -50,7 +50,6 @@ span {
 .clickButton button {
   border: none;
   font-size: 15px;
-  /* color: rgb(56, 54, 51); */
   background-color: #a9b2a2;
   size: 15pt;
   width: 200px;
@@ -94,7 +93,6 @@ span {
 
 .ideaState {
   margin-top: 15px;
-  /* color: rgb(56, 54, 51); */
   text-align: center;
 }
 
@@ -143,4 +141,23 @@ span {
   position: absolute;
   left: 300px;
   text-align: center;
+}
+
+.ideaButtons {
+  display: flex;
+}
+
+.closeButton button {
+  background-color: #57756a;
+  border: 0;
+  font-size: 30pt;
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
+  color: rgb(245, 223, 189);
+}
+
+.closeButton button:focus { 
+  outline: none !important;
+  border: 0 !important;
 }

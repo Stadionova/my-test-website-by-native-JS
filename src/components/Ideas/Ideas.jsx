@@ -91,6 +91,11 @@ class Ideas extends Component {
         // this.setState({ ideaNum: this.state.comment });
     };
 
+    hideIdeaBlock(event) {
+        let hiddenIdeaBlock = event.currentTarget.parentNode.parentNode.parentNode;
+        hiddenIdeaBlock.style.display='none';
+    };
+
     // метод render возвращает html страничку (отрендерить - значит "отрисовать")
     render() {
         return (
@@ -99,8 +104,13 @@ class Ideas extends Component {
                 return <Submit />
             })} */}
                 {/* добавила обработчик события на клик по кнопке */}
-                <div className='clickButton'>
-                    <button onClick={this.pushNewIdeaByButton.bind(this)}>Submit new Idea</button>
+                <div className='ideaButtons'>
+                    <div className='clickButton'>
+                        <button onClick={this.pushNewIdeaByButton.bind(this)}>Submit new Idea</button>
+                    </div>
+                    <div className='closeButton'>
+                        <button onClick={this.hideIdeaBlock.bind(this)}>&#215;</button>
+                    </div>
                 </div>
                 <div className='ideaState'>
                     Write your IDEA
