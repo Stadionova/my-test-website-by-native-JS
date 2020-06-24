@@ -157,6 +157,9 @@ class Ideas extends Component {
                             {/* <input value={this.state.comment} onChange={this.changeInputText} onKeyPress={this.createNewIdeaByEnter.bind(this)}></input> */}
                             <div class='idea'><div>{item}</div></div>
                             <Like /> 
+                            {/* <div className='likeIcon'>
+                                <span>&#10084;</span>
+                            </div> */}
                         </div>
                     )
                 })}
