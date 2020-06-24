@@ -8,7 +8,7 @@ import Competition from './components/Competition/Competition';
 // импортирую объект articles
 import { articles } from './components/fixture';
 // import { BrowserRouter, Route } from 'react-router-dom';
-console.log(1);
+
 // function App() {
 class App extends Component {
     constructor() {
@@ -38,7 +38,7 @@ class App extends Component {
         // и кладу первый элемент массива в переменную article
         const article = articles[0];
         const twoObj = articles[1];
-        console.log(twoObj);
+
         return ( 
             <div className = 'container'>
                 <div className = "grid__App"> 
