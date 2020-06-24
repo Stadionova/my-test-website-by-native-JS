@@ -36,7 +36,7 @@ class App extends Component {
     render() {
         // у меня в articles лежит массив объектов, достаю его первый элемент по индексу 0
         // и кладу первый элемент массива в переменную article
-        const article = articles[0];
+        const article = articles[2];
         const twoObj = articles[1];
 
         return ( 

@@ -6,5 +6,9 @@ export const articles = [
     {
         'age': 21,
         'city': 'Moscow'
+    },
+    {
+        '': '',
+        '': ''
     }
 ];
