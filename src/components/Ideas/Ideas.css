@@ -138,10 +138,9 @@ span {
 }
 
 .idea div {
-  top: 90px;
-  position: absolute;
-  left: 300px;
+  margin: 0 auto;
   text-align: center;
+  margin-top: 45px;
 }
 
 .ideaButtons {

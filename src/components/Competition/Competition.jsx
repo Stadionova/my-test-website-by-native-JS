@@ -10,8 +10,8 @@ const Competition = (props) => {
             {/* в компоненте App.js и в Header.jsx */}
             {/* при первом вызове я передаю объект, при втором не передаю */}
             {/* поэтому скрипт падал не при первом вызове, а при втором */}
-            {objProps && objProps.age}
-            {objProps && objProps.city}
+            {/* {objProps && objProps.age} */}
+            {/* {objProps && objProps.city} */}
             <a href="#">COMPETITION</a>
         </div>
     )
