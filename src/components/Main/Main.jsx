@@ -32,13 +32,13 @@ class Main extends Component {
         this.setState({ idea: null });
     };
 
-    pushNewIdeaByButton(event) {
+    pushNewIdeaByButton() {
         if (this.state.idea) {
             this.pushNewIdea();
         }
     };
 
-    crollPageToTheBottom() {
+    scrollPageToTheBottom() {
         window.scrollTo(0, window.outerHeight);
     };
 
@@ -75,7 +75,7 @@ class Main extends Component {
                         </div>
                     </div>
                     <div className={s.scrollSpan}>
-                        <button onClick={this.crollPageToTheBottom.bind(this)}>Scroll down to view all ideas</button>
+                        <button onClick={this.scrollPageToTheBottom.bind(this)}>Scroll down to view all ideas</button>
                     </div>
                 </div>
 

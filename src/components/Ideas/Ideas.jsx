@@ -49,6 +49,7 @@ class Ideas extends Component {
         this.props.onAddIdeaToState(newIdea);
         // обнуляю инпут с написанной идеей
         this.setState({ idea: ' ' });
+        setTimeout(() => window.scrollTo(0, window.outerHeight), 100);
         // а потом в ideas кладём этот новый массив с новой идеей
         // this.setState({ ideas: newIdea })
         // затем обнуляю содержимое input
@@ -68,9 +69,10 @@ class Ideas extends Component {
     // потому что у input есть event Enter,
     // а у клика по кнопке такого event нет
     // если инпут пустой, кнопка не работает
-    pushNewIdeaByButton(event) {
+    pushNewIdeaByButton() {
         if (this.state.idea != ' ') {
             this.pushNewIdea();
+            setTimeout(() => window.scrollTo(0, window.outerHeight), 100);
         }
     };
 
@@ -80,6 +82,7 @@ class Ideas extends Component {
         // вызываем общий и для button, и для input метод pushNewIdea 
         if (event.key === 'Enter') {
             this.pushNewIdea();
+            setTimeout(() => window.scrollTo(0, window.outerHeight), 100);
         }
     };
 
