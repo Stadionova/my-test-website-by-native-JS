@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Ideas.css';
+import Like from '../Like/Like';
 
 // класс Ideas наследует от Component
 class Ideas extends Component {
@@ -155,6 +156,7 @@ class Ideas extends Component {
                             </div>
                             {/* <input value={this.state.comment} onChange={this.changeInputText} onKeyPress={this.createNewIdeaByEnter.bind(this)}></input> */}
                             <div class='idea'><div>{item}</div></div>
+                            <Like /> 
                         </div>
                     )
                 })}
