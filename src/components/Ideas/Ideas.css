@@ -50,7 +50,6 @@ span {
 .clickButton button {
   border: none;
   font-size: 15px;
-  /* color: rgb(56, 54, 51); */
   background-color: #a9b2a2;
   size: 15pt;
   width: 200px;
@@ -94,14 +93,14 @@ span {
 
 .ideaState {
   margin-top: 15px;
-  /* color: rgb(56, 54, 51); */
   text-align: center;
 }
 
 .ideaColor {
-  margin-top: 15px;
   color: rgb(56, 54, 51);
   text-align: center;
+  margin: 0 auto;
+  margin-top: 17px;
 }
 
 .ideasBlock {
@@ -139,8 +138,40 @@ span {
 }
 
 .idea div {
-  top: 90px;
-  position: absolute;
-  left: 300px;
+  margin: 0 auto;
   text-align: center;
+  margin-top: 45px;
+}
+
+.ideaButtons {
+  display: flex;
+}
+
+.closeButton button {
+  background-color:rgb(245, 223, 189);
+  border: 0;
+  font-size: 30pt;
+  cursor: pointer;
+  position: absolute;
+  right: 22px;
+  color: #57756a;
+  height: 0;
+}
+
+.closeButton button:focus { 
+  outline: none !important;
+  border: 0 !important;
+}
+
+.ideaName {
+  font-size: 15px;
+  background-color: rgb(245, 223, 189);
+  font-family: 'Montserrat', sans-serif;
+  size: 15pt;
+  width: 200px;
+  outline: none;
+  margin-right: 5px;
+  text-align: center;
+  border: 0;
+  font-weight: 700;
 }

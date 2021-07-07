@@ -1,0 +1,14 @@
+.likeIcon span {
+  color: transparent;  
+  text-shadow: 0 0 0 red;
+}
+
+.likeIcon {
+  color: transparent;
+  text-shadow: 0 0 0 red;
+  position: absolute;
+  right: 30px;
+  font-size: 15pt;
+  bottom: 20px;
+  cursor: pointer;
+}

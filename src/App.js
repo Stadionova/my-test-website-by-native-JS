@@ -1,14 +1,14 @@
 // import React from 'react';
 import React, { Component } from 'react';
 import './App.css';
-import Header from './components/Header/Header';
+import Header from './components/header/header';
 import Main from './components/Main/Main';
 import Ideas from './components/Ideas/Ideas';
 import Competition from './components/Competition/Competition';
 // импортирую объект articles
 import { articles } from './components/fixture';
 // import { BrowserRouter, Route } from 'react-router-dom';
-console.log(1);
+
 // function App() {
 class App extends Component {
     constructor() {
@@ -36,25 +36,20 @@ class App extends Component {
     render() {
         // у меня в articles лежит массив объектов, достаю его первый элемент по индексу 0
         // и кладу первый элемент массива в переменную article
-        const article = articles[0];
+        const article = articles[2];
         const twoObj = articles[1];
-        console.log(twoObj);
-        return ( <
-            div className = 'container' >
-            <
-            div className = "grid__App" > { /* передаю в пропсы компоненты Header атрибут article, в который кладу переменную article */ } <
-            Header article = { article }
-            /> <
-            Main ideas = { this.state.ideas }
-            onAddIdeaToState = { this.addIdeaToState }
-            /> { / * в пропс компоненты Ideas передаю пропс ideas, в котором лежит массив с идеями, название пропсам даю любое * / } { / * так же передаю в пропс общий метод * / } <
-            Ideas ideas = { this.state.ideas }
-            onAddIdeaToState = { this.addIdeaToState }
-            /> <
-            Competition objProps = { twoObj }
-            /> < /
-            div > <
-            /div>
+
+        return ( 
+            <div className = 'container'>
+                <div className = "grid__App"> 
+                    <Header article = { article }/> 
+                    <Main ideas = { this.state.ideas }
+                    onAddIdeaToState = { this.addIdeaToState }/>  
+                    <Ideas ideas = { this.state.ideas }
+                    onAddIdeaToState = { this.addIdeaToState }/> 
+                    <Competition objProps = { twoObj }/> 
+                </div> 
+            </div>
         );
     }
 }

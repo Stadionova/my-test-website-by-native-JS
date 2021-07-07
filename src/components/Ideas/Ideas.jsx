@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Ideas.css';
+import Like from '../Like/Like';
 
 // класс Ideas наследует от Component
 class Ideas extends Component {
@@ -48,6 +49,7 @@ class Ideas extends Component {
         this.props.onAddIdeaToState(newIdea);
         // обнуляю инпут с написанной идеей
         this.setState({ idea: ' ' });
+        setTimeout(() => window.scrollTo(0, window.outerHeight), 100);
         // а потом в ideas кладём этот новый массив с новой идеей
         // this.setState({ ideas: newIdea })
         // затем обнуляю содержимое input
@@ -67,9 +69,10 @@ class Ideas extends Component {
     // потому что у input есть event Enter,
     // а у клика по кнопке такого event нет
     // если инпут пустой, кнопка не работает
-    pushNewIdeaByButton(event) {
+    pushNewIdeaByButton() {
         if (this.state.idea != ' ') {
             this.pushNewIdea();
+            setTimeout(() => window.scrollTo(0, window.outerHeight), 100);
         }
     };
 
@@ -79,6 +82,7 @@ class Ideas extends Component {
         // вызываем общий и для button, и для input метод pushNewIdea 
         if (event.key === 'Enter') {
             this.pushNewIdea();
+            setTimeout(() => window.scrollTo(0, window.outerHeight), 100);
         }
     };
 
@@ -89,6 +93,11 @@ class Ideas extends Component {
         this.setState({ idea: event.currentTarget.value });
         /* закомментила, потому что изначально хотела дублировать написанную идею справа от заголовка: Write your IDEA */
         // this.setState({ ideaNum: this.state.comment });
+    };
+
+    hideIdeaBlock(event) {
+        let hiddenIdeaBlock = event.currentTarget.parentNode.parentNode.parentNode;
+        hiddenIdeaBlock.style.display='none';
     };
 
     // метод render возвращает html страничку (отрендерить - значит "отрисовать")
@@ -139,14 +148,16 @@ class Ideas extends Component {
                 {this.props.ideas.map((item) => {
                     return (
                         <div className='createIdeas'>
-                            {/* <div className='clickButton'>
-                                <button onClick={this.createNewIdeaByButton.bind(this)}>Submit new Idea</button>
-                            </div> */}
-                            <div className='ideaColor'>
-                                It's your IDEA
+                            <div className='ideaButtons'>
+                                <div className='ideaColor'>
+                                    <input className='ideaName' placeholder="Name of your IDEA"></input>
                                 </div>
-                            {/* <input value={this.state.comment} onChange={this.changeInputText} onKeyPress={this.createNewIdeaByEnter.bind(this)}></input> */}
+                                <div className='closeButton'>
+                                    <button onClick={this.hideIdeaBlock.bind(this)}>&#215;</button>
+                                </div>
+                            </div>
                             <div class='idea'><div>{item}</div></div>
+                            <Like /> 
                         </div>
                     )
                 })}
